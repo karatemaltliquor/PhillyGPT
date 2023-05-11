@@ -1,7 +1,6 @@
 # Bring in deps
 import os 
-from config import apikey 
-
+ 
 import streamlit as st 
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
@@ -9,7 +8,7 @@ from langchain.chains import LLMChain, SequentialChain
 from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper 
 
-# os.environ['OPEN_UP'] = apikey
+os.environ['OPEN_UP'] = apikey
 
 # App framework
 st.title('🥨 Philly GPT 🥨')
