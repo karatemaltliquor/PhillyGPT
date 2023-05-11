@@ -1,1 +1,3 @@
-apikey = OPEN_UP
+import os
+
+apikey = os.environ['OPEN_UP']
