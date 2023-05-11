@@ -8,7 +8,7 @@ from langchain.chains import LLMChain, SequentialChain
 from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper 
 
-os.environ['OPEN_UP'] = apikey
+os.environ['OPENAI_API_KEY']
 
 # App framework
 st.title('🥨 Philly GPT 🥨')
