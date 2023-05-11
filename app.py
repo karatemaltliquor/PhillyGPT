@@ -6,7 +6,6 @@ from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain 
 from langchain.memory import ConversationBufferMemory
-from langchain.utilities import WikipediaAPIWrapper 
 
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
@@ -27,7 +26,6 @@ llm = OpenAI(temperature=0.9)
 title_chain = LLMChain(llm=llm, prompt=title_template, verbose=True, output_key='title')
 # script_chain = LLMChain(llm=llm, prompt=script_template, verbose=True, output_key='script', memory=script_memory)
 
-wiki = WikipediaAPIWrapper()
 
 # Show stuff to the screen if there's a prompt
 if prompt: 
